@@ -37,5 +37,25 @@ const UserList =[
         nationality:"CANADA"
     },
 ];
-
-module.exports = {UserList};
+ 
+const MovieList=[
+    {
+        id:1,
+        name:"Avenger",
+        year:2021,
+        IsInAvailable:false
+    },
+    {
+        id:2,
+        name:"Kadira Divya Raja",
+        year:2008,
+        IsInAvailable:true
+    },
+    {
+        id:3,
+        name:"Kathuru Mithuru",
+        year:2023,
+        IsInAvailable:true
+    }
+]
+module.exports = {UserList,MovieList};
