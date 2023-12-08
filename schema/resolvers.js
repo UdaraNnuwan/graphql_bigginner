@@ -14,9 +14,12 @@ const resolvers={
         // },
 
         //user Resolver with arrow funtion
-        users:(parent,args,context)=>{
-            console.log(context)
-            return UserList;
+        users:(parent,args,context,info)=>{
+            // console.log(info)
+            // console.log(context.req.headers)
+            // return UserList;
+            if(UserList) return {users:UserList};
+            return {message:"There was an error"}
         },
 
         user(parentId,args,context,info){
@@ -67,6 +70,17 @@ const resolvers={
             const id =args.id
             _.remove(UserList,(user)=>user.id===Number(id))
             return null
+        }
+    },
+
+    UserResult:{
+        __resolveType(obj){
+            if(obj.users){
+                return "UserSuccessfulResult";
+            }
+
+            return "UserErrorResult";
+
         }
     }
 }

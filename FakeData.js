@@ -1,42 +1,44 @@
-const UserList =[
-    {
-        id:1,
-        name:"Udara",
-        username:"udara",
-        age:28,
-        nationality:"ENGLAND",
-        friend:[
-            {
-                id:2,
-                name:"Nuwan",
-                username:"nuwan",
-                age:27,
-                nationality:"ENGLAND"
-            },
-            {
-                id:3,
-                name:"Ganesh",
-                username:"ganesh",
-                age:25,
-                nationality:"CANADA"
-            },
-        ],
-    },
-    {
-        id:2,
-        name:"Nuwan",
-        username:"nuwan",
-        age:27,
-        nationality:"ENGLAND"
-    },
-    {
-        id:3,
-        name:"Ganesh",
-        username:"ganesh",
-        age:25,
-        nationality:"CANADA"
-    },
-];
+// const UserList =[
+//     {
+//         id:1,
+//         name:"Udara",
+//         username:"udara",
+//         age:28,
+//         nationality:"ENGLAND",
+//         friend:[
+//             {
+//                 id:2,
+//                 name:"Nuwan",
+//                 username:"nuwan",
+//                 age:27,
+//                 nationality:"ENGLAND"
+//             },
+//             {
+//                 id:3,
+//                 name:"Ganesh",
+//                 username:"ganesh",
+//                 age:25,
+//                 nationality:"CANADA"
+//             },
+//         ],
+//     },
+//     {
+//         id:2,
+//         name:"Nuwan",
+//         username:"nuwan",
+//         age:27,
+//         nationality:"ENGLAND"
+//     },
+//     {
+//         id:3,
+//         name:"Ganesh",
+//         username:"ganesh",
+//         age:25,
+//         nationality:"CANADA"
+//     },
+// ];
+
+const UserList =null
  
 const MovieList=[
     {

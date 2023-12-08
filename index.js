@@ -3,8 +3,8 @@ const {typeDefs} =require("./schema/type-defs");
 const {resolvers} = require("./schema/resolvers")
 
 const server =new ApolloServer({typeDefs,resolvers,
-    context:()=>{
-        return {name:"Udara"}
+    context:({req})=>{
+        return {req}
     }
 })
 server.listen().then(({url})=>{

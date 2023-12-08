@@ -11,7 +11,8 @@ const typeDefs=gql`
         favouriteMovie:[Movie]
     }
     type Query {
-        users:[User!]!
+        #users:[User!]!
+        users:UserResult
         user(id:ID!):User!
         movies:[Movie!]!
         movie(name:String!):Movie!
@@ -47,6 +48,16 @@ const typeDefs=gql`
         GERMANY
         AUSTRALIA
     }
+
+    type UserSuccessfulResult{
+        users:[User!]!
+    }
+
+    type UserErrorResult{
+        message:String!
+    }
+
+    union UserResult=UserSuccessfulResult|UserErrorResult
 `;
 
 module.exports={typeDefs};
