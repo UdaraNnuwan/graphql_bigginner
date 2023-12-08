@@ -1,6 +1,11 @@
 const {UserList,MovieList} =require("../FakeData")
 const _ = require("lodash")
 
+
+
+/*
+query->users->favouriteMovie->anotherLevel
+*/
 const resolvers={
     Query:{
         //user Resolvers
@@ -9,11 +14,12 @@ const resolvers={
         // },
 
         //user Resolver with arrow funtion
-        users:()=>{
+        users:(parent,args,context)=>{
+            console.log(context)
             return UserList;
         },
 
-        user(parentId,args){
+        user(parentId,args,context,info){
             const id = args.id
             const user= _.find(UserList,{id:Number(id)})
             return user;
@@ -30,7 +36,8 @@ const resolvers={
         }
     },
     User:{
-        favouriteMovie:()=>{
+        favouriteMovie:(parent)=>{
+            // console.log(parent)
             return _.filter(MovieList,(movie)=>movie.year>=2000&& movie.year<=2008)
         }
     },
